@@ -1,0 +1,1 @@
+cc -o tokenizer -g -O3  uimain.o tester.o
