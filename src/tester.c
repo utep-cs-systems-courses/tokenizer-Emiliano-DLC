@@ -25,21 +25,21 @@ static char *test_string_length() {
     return 0;
 }
 static char *test_is_valid_character() {
-    mu_assert("is_valid_character(' ') == 0", is_valid_character(' ') == 0);
-    mu_assert("is_valid_character('h') == 1", is_valid_character('h') == 1);
+    mu_assert("is_valid_character(' ') == 0", space_char(' ') == 0);
+    mu_assert("is_valid_character('h') == 1", space_char('h') == 1);
     return 0;
 }
 
 static char *test_find_word_start() {
     char *str = "  happy";
-    mu_assert("find_word_start('  happy') == &str[2]'", find_word_start(str) == &str[2]);
+    mu_assert("find_word_start('  happy') == &str[2]'", word_start(str) == &str[2]);
     return 0;
 }
 
 static char *test_find_word_terminator() {
   char *str = "happy joy", *empty="";
-    mu_assert("find_word_terminator('happy joy') == &str[5]' '", find_word_terminator(str) == &str[5]);
-    mu_assert("find_word_terminator(emptyStr) == empty", find_word_terminator(empty) == empty);
+    mu_assert("find_word_terminator('happy joy') == &str[5]' '", terminator(str) == &str[5]);
+    mu_assert("find_word_terminator(emptyStr) == empty", terminator(empty) == empty);
     return 0;
 }
 
