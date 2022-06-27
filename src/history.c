@@ -49,7 +49,7 @@ char *get_history(List *list, int id)
     {
       if(node -> id == id)// id node id == to id
 	{
-	  return curr_node -> str;//return str at the id index
+	  return node -> str;//return str at the id index
 	}
       node = node -> next;//advance on the list
     }
