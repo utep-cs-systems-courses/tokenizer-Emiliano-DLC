@@ -86,10 +86,10 @@ void free_tokens(char **tokens) //free
   int index = 0;
   while(tokens[index] != '\0')
     {
-      free(tokens[index];
+      free(tokens[index]);
       index++;
     }
-  free(tokens[index]//clears '\0'
+  free(tokens[index]);//clears '\0'
   free(tokens);
 }
 
