@@ -36,6 +36,7 @@ int count_words( char *str)
       str = word_terminator(str); //addvance on the number of words
       count++;// increase occurences
     }
+  count ++; // If is a one word string
   return count;
 }
 
@@ -43,13 +44,13 @@ char *copy_str(char *inStr, short len)
 {
   int index = 0;
   char *mallocarray = (char *)malloc(sizeof(char) * (len + 1)); //allocates memory 
-  while( index < len)
+  while(index < len)
     {
       mallocarray[index] = inStr[index]; //copy into mallocarray
       index++;
     }
   mallocarray[index] = '\0'; //End of the array
-  return mallocsrray; //return malloc
+  return mallocarray; //return malloc
 }
 
 char **tokenize(char* str)
@@ -64,7 +65,7 @@ char **tokenize(char* str)
     {
       malloc2darray[count] = copy_str(begin, (end - begin));
       begin = word_start(end);
-      end = word_terminator(start);
+      end = word_terminator(begin);
     }
   malloc2darray[count] = '\0';
   return malloc2darray;
@@ -78,13 +79,18 @@ void print_tokens(char **tokens) //Print
       printf("token[%d] = %s" , index, tokens[index]);
       index++;
     }
-  return 0;
 }
 
 void free_tokens(char **tokens) //free
 {
+  int index = 0;
+  while(tokens[index] != '\0')
+    {
+      free(tokens[index];
+      index++;
+    }
+  free(tokens[index]//clears '\0'
   free(tokens);
-  return 0;
 }
 
 
