@@ -83,7 +83,7 @@ char **tokenize(char* str)
       token[i] = copy_str(str, (end - str));
       str = word_terminator(str);
     }
-  token[i] = NULL;
+  token[i] = '\0';
   return token;
 }
 
