@@ -15,7 +15,7 @@ int space_char(char c)
 
 int non_space_char(char c)
 {
-  if(c != ' ' || c != '\t' || c != '\0')
+  if(c != ' ' || c != '\t')
     {
       return 0;
     }
