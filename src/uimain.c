@@ -17,6 +17,8 @@ int main(){
   char *funTester;
   int temp;
   int wordCounter;
+	char *ou;
+	int count;
   
   //History
   List *list = init_history();
