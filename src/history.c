@@ -62,7 +62,7 @@ void print_history(List *list)
   Item *node = list -> root;
   while(node != NULL)//iterate the list
     {
-      printf("%s", node -> str);//print node str
+      printf("%s\n", node -> str);//print node str
       node = node -> next;//advance to the next element
     }
   //printf("done");
