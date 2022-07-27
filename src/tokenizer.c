@@ -17,10 +17,10 @@ int non_space_char(char c)
 {
   if(c == ' ' || c == '\t' || c == '\0')
     {
-      return 1;
+      return 0;
     }
   else
-    return 0;
+    return 1;
 }
 
 char *word_start(char *str)
