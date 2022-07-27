@@ -18,7 +18,7 @@ int main(){
   int temp;
   int wordCounter;
 	char *ou;
-	int count;
+	int test_count;
   
   //History
   List *list = init_history();
@@ -46,8 +46,8 @@ int main(){
 		printf("pointer start :%c\n", *ou);
 		ou = word_start(pointer);
 		printf("pointer end :%c\n", *ou);
-		count = count_words(pointer);
-		printf("Number of words :%d\n", count);
+		test_count = count_words(pointer);
+		printf("Number of words :%d\n", test_count);
 		ou = copy_str(pointer, 5);
 		printf("Copy :%c\n", *ou);
 			//End of test cases		
