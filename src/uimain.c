@@ -44,7 +44,7 @@ int main(){
 	  print_tokens(tokens);
 	  add_history(list, word);
 	  printf("-----------\n");
-	  printf("Print current History");
+	  printf("Print current History\n");
 	  print_history(list);
 	  free_tokens(tokens);
 	  printf("___\n");
