@@ -17,8 +17,8 @@ int main(){
   char *funTester;
   int temp;
   int wordCounter;
-	char *ou;
-	int test_count;
+	/*char *ou;
+	int test_count;*/
   
   //History
   List *list = init_history();
@@ -42,14 +42,14 @@ int main(){
 	  break;
 	default:
 		      //Test cases for the function
-		ou = word_start(pointer);
+		/*ou = word_start(pointer);
 		printf("pointer start :%c\n", *ou);
 		ou = word_start(pointer);
 		printf("pointer end :%c\n", *ou);
 		test_count = count_words(pointer);
 		printf("Number of words :%d\n", test_count);
 		ou = copy_str(pointer, 5);
-		printf("Copy :%c\n", *ou);
+		printf("Copy :%c\n", *ou);*/
 			//End of test cases		
 		      
 	  tokens = tokenize(pointer);
