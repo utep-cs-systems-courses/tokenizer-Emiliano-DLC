@@ -87,13 +87,12 @@ char **tokenize(char* str)
 
 void print_tokens(char **tokens) //Print
 {
-  int i = 0;
-  while(*tokens != '\0')
-    {
-      printf("token[%d]: %s\n", i, tokens);
-      tokens++;
-      i++;
-    }
+  int i;
+  for(i = 0; tokens[i] != NULL; i++)
+  {
+      printf("token[%d]: %s\n", i, tokens[i]);
+ 
+  }
 }
 
 void free_tokens(char **tokens) //free
