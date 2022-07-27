@@ -65,7 +65,7 @@ void print_history(List *list)
       printf("%s", node -> str);//print node str
       node = node -> next;//advance to the next element
     }
-  printf("done");
+  //printf("done");
 }
 
 /*Free the history list and the strings it references. */

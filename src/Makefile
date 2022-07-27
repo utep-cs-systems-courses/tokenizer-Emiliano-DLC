@@ -1,21 +1,18 @@
-#Objects (.o files)
-OBJS = tokenizer.o history.o
-OBJS_MAIN = $(OBJS) uimain.o
-
 #Flag
 CFLAGS=-g -O3
 
 #dependencies
-tokenizer.h :tokenizer.o uimain.o
-history.h: uimain.o history.o tokenizer.o
+tokenizer.o: tokenizer.h
+uimain.o: tokenizer.h
+history.o: history.c
 
-tokenizer: $(OBJS_MAIN)
-	cc -o tokenizer $(CFLAGS) $(OBJS_MAIN)
+uimain: tokenizer.o history.o uimain.o
+	cc -o $@ $^ $(CFLAGS)
 
-all: tokenizer
+all: uimain
 
 clean:
-	rm -f *.o src
+	rm -f *.o *.c~ *.h~ *~ *.c# *.h# src
 
-run:tokenizer
-	./tokenizer
+run:uimain
+	./uimain
