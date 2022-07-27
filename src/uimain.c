@@ -39,6 +39,17 @@ int main(){
 	  printf("process terminated");
 	  break;
 	default:
+		      //Test cases for the function
+		ou = word_start(pointer);
+		printf("pointer start :%c\n", *output);
+		ou = word_start(pointer);
+		printf("pointer end :%c\n", *output);
+		count = count_words(pointer)
+		printf("Number of words :%d\n", count);
+		ou = copy_str(pointer, 5);
+		printf("Copy :%c\n", *output);
+			//End of test cases		
+		      
 	  tokens = tokenize(pointer);
 	  printf("Tokens\n");
 	  print_tokens(tokens);
