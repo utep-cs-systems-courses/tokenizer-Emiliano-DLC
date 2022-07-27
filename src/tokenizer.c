@@ -60,23 +60,24 @@ int count_words( char *str)
 
 char *copy_str(char *inStr, short len)
 {
-  char *str = (char*)malloc((len+1) * sizeof(char));
+  char *str = (char*)malloc((len+1) * sizeof(char));	//Allocates space for the string
   int i;
-  for(i = 0; i < len; i++)
+  for(i = 0; i < len; i++)//Iterates through the length of the word
     {
-      str[i] = inStr[i];
+      str[i] = inStr[i];	//Make the copy
     }
-  str[i] = '\0';
+  str[i] = '\0';	//last index
   return str;
 }
 
 char **tokenize(char* str)
 {
-  int tkn_num = count_words(str);
-  char **token = (char**) malloc((tkn_num+1) * sizeof(char*));
+  int tkn_num = count_words(str);//Gets the number of tokens
+  char **token = (char**) malloc((tkn_num+1) * sizeof(char*));//Allocate space for 2darraay
+	//Variables
   char *end;
   int i;
-  for(i = 0; i < tkn_num; i++)
+  for(i = 0; i < tkn_num; i++)//Iterates through the number of tokens
     {
       str = word_start(str);
       end = word_terminator(str);
