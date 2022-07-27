@@ -41,13 +41,13 @@ int main(){
 	default:
 		      //Test cases for the function
 		ou = word_start(pointer);
-		printf("pointer start :%c\n", *output);
+		printf("pointer start :%c\n", *ou);
 		ou = word_start(pointer);
-		printf("pointer end :%c\n", *output);
+		printf("pointer end :%c\n", *ou);
 		count = count_words(pointer)
 		printf("Number of words :%d\n", count);
 		ou = copy_str(pointer, 5);
-		printf("Copy :%c\n", *output);
+		printf("Copy :%c\n", *ou);
 			//End of test cases		
 		      
 	  tokens = tokenize(pointer);
