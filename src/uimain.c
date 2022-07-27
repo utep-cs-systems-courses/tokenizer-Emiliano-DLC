@@ -44,7 +44,7 @@ int main(){
 		printf("pointer start :%c\n", *ou);
 		ou = word_start(pointer);
 		printf("pointer end :%c\n", *ou);
-		count = count_words(pointer)
+		count = count_words(pointer);
 		printf("Number of words :%d\n", count);
 		ou = copy_str(pointer, 5);
 		printf("Copy :%c\n", *ou);
