@@ -15,18 +15,18 @@ int space_char(char c)
 
 int non_space_char(char c)
 {
-  if(c != ' ' || c != '\t')
+  if(c == ' ' || c == '\t' || c == '\0')
     {
-      return 0;
+      return 1;
     }
   else
-    return 1;
+    return 0;
 }
 
 char *word_start(char *str)
 {
   //int index = 0;
-  while(space_char(*str) == 1){
+  while(space_char(*str) == 1 && *str != '\0'){
     str++;
   }//Iterates str and increments index by one
   return str; //Return addres str[index]
@@ -34,10 +34,12 @@ char *word_start(char *str)
 
 char *word_terminator(char *word)
 {
-  while(non_space_char(*word) == 1){
-    word++;
-  }
-  return word;
+  word = word_start(word);
+	while(non_space_char(*word) == 1 && *word != '\0')
+	{
+		word++;
+	}
+	return word;
 }
 
 int count_words( char *str)
