@@ -1,27 +1,30 @@
-#Project 1: Tokenizer
-==================
+# Project 1: Tokenizer
 
-##Tokenizer is a program wich main goal is to separate by token each word of a given input.
+## Tokenizer is a program wich main goal is to separate by token each word of a given input.
+
+## Tokenizer
+
+ <ul>
+<li>space_char :<li>
+  >This function return true (1) if there is a ' ' or '\t' character in the given string.
  
-----------------------------
-##Tokenizer
+<li>non_space_char :<li>
+  >This function return false (0) if there is a ' ' or '\t' character in the given string.
 
--space_char
---This function return true (1) if there is a ' ' or '\t' character in the given string.
--non_space_char
---This function return false (0) if there is a ' ' or '\t' character in the given string.
--word_start
---This function returns a pointer to the adress of the first letter of the string.
--word_terminator
---
--count_words
+<li>word_start :<li>
+ >This function returns a pointer to the adress of the first letter of the string.
+ 
+<li>word_terminator :<li>
+ 
+<li>count_words :<li>
+ 
+<li>copy_str :<li>
 
--copy_str
-
--tokenize
-
--print_tokens
-
--free_tokens
---this function deallocate the memory used 
+<li>tokenize :<li>
+ 
+<li>print_tokens :<li>
+ 
+<li>free_tokens :<li>
+ 
+ </ul>
 
